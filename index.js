@@ -6,5 +6,4 @@ http.createServer((request, Response) => {
     console.log('Server with Hello World');
 }).listen(4000, () => {
     console.log('Server is runnig on http://localhost:4000');
-    
 })
