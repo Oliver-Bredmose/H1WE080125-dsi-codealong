@@ -1,9 +1,20 @@
-import http from "http"
+import express from 'express'
+import dotenv from 'dotenv'
+import { carRouter } from './Routes/carRoutes.js'
 
-http.createServer((request, Response) => {
-    Response.writeHead(200, {'Content-type': 'text/plain' })
-    Response.end('Hej Webudviklere')
-    console.log('Server with Hello World');
-}).listen(4000, () => {
-    console.log('Server is runnig on http://localhost:4000');
+dotenv.config()
+
+const port = process.env.SERVERPORT || 3000
+const app = express()
+
+// Kalder root route med request og response objekt 
+app.get('/', (req, res) => {
+    res.send('Hej verden!')
+    console.log(req);
+})
+
+app.use("/cars",carRouter)
+
+app.listen(port, () => {
+    console.log(`Server køre på http://localhost:${port}`);
 })

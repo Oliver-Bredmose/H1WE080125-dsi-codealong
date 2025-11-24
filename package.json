@@ -16,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/Webudvikler-TechCollege/H1WE080125-dsi-codealong/issues"
   },
-  "homepage": "https://github.com/Webudvikler-TechCollege/H1WE080125-dsi-codealong#readme"
+  "homepage": "https://github.com/Webudvikler-TechCollege/H1WE080125-dsi-codealong#readme",
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "prisma": "^6.19.0"
+  }
 }
